@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note App - Image Notes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 Note App</h1>
+            <p>Create notes with images and descriptions</p>
+        </header>
+
+        <div class="input-section">
+            <h2>Add New Note</h2>
+            <form id="noteForm">
+                <div class="form-group">
+                    <label for="imageInput">Choose Image:</label>
+                    <input type="file" id="imageInput" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="descriptionInput">Description:</label>
+                    <textarea id="descriptionInput" placeholder="Enter a description for your note..." rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-add">Add Note</button>
+            </form>
+        </div>
+
+        <div class="notes-section">
+            <h2>Your Notes</h2>
+            <div id="notesContainer" class="notes-grid">
+                <!-- Notes will be displayed here -->
+            </div>
+            <p id="noNotesMessage" class="no-notes">No notes yet. Add your first note above!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
